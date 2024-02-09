@@ -6,10 +6,10 @@ import { useNavigate } from 'react-router-dom';
 const CarDetail = ({ product }) => {
     const navigate = useNavigate();
 
-    const carImages = product.photos.map((photo, index) => ({
+    const carImages = product.photos?.map((photo, index) => ({
         source: photo,
         alt: `Car Image ${index + 1}`,
-    }));
+    })) || [];
 
     const handleContact = async (product) => {
         try {
@@ -35,11 +35,22 @@ const CarDetail = ({ product }) => {
         }
     };
 
-    const carTemplate = (carImage) => (
-        <div>
-            <img src={carImage.source} alt={carImage.alt} className="carousel-image" style={{ width: '100%' }} />
-        </div>
-    );
+    const carTemplate = (carImage) => {
+        if (!product.photos || product.photos.length === 0) {
+            return (
+                <div>
+                    {/* Render a default image or a message */}
+                    <img src="default-image.jpg" alt="No Image" className="carousel-image" style={{ width: '100%' }} />
+                </div>
+            );
+        }
+    
+        return (
+            <div>
+                <img src={carImage.source} alt={carImage.alt} className="carousel-image" style={{ width: '100%' }} />
+            </div>
+        );
+    };
 
     return (
         <div className="car-container" style={{ width: "960px", margin: 'auto', objectFit: 'cover' }}>
