@@ -1,0 +1,31 @@
+/* FormStyles.css */
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+
+label {
+    margin: 8px 0;
+}
+
+
+.input-filtre {
+    padding: 8px;
+    margin: 4px 0;
+    width: 100%;
+}
+
+
+.btn-filtre {
+    background-color: #6366f1;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
