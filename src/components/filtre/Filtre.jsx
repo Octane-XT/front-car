@@ -7,13 +7,13 @@ import './Filtre.css';
 
 const Filtre = ({ onSubmit }) => {
     const [formData, setFormData] = useState({
-        idModel: null,
-        idCategorie: null,
-        idMarque: null,
-        prix1: null,
-        prix2: null,
-        date1: null,
-        date2: null,
+        idModel: '',  
+        idCategorie: '',  
+        idMarque: '',
+        prix1: '',
+        prix2: '',
+        date1: '',
+        date2: '',
     });
 
     const [modelOptions, setModelOptions] = useState([]);

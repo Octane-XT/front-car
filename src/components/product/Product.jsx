@@ -25,9 +25,9 @@ export default function Product({ products }) {
         
     };
 
-    const gridItem = (product) => {
+    const gridItem = (product,index) => {
         return (
-            <div className="col-12 sm:col-6 lg:col-12 xl:col-4 p-2" key={product.id}>
+            <div className="col-12 sm:col-6 lg:col-12 xl:col-4 p-2" key={index}>
                 <div className="p-4 border-1 surface-border surface-card border-round">
                     <div className="flex flex-wrap align-items-center justify-content-between gap-2">
                         <div className="flex align-items-center gap-2">
@@ -59,7 +59,7 @@ export default function Product({ products }) {
     };
 
     const itemTemplate = (product, layout, index) => {
-        if (layout === 'grid') return gridItem(product);
+        if (layout === 'grid') return gridItem(product,index);
     };
 
     const listTemplate = (products, layout) => {
