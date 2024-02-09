@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Menubar } from 'primereact/menubar';
 import { Button } from 'primereact/button';
-import { Dropdown } from 'primereact/dropdown';
+
 import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {

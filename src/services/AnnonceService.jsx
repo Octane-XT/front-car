@@ -66,7 +66,6 @@ const AnnonceService = {
 
     addFavoris: async (idannonce) => {
         try {
-            console.log(JSON.stringify(idannonce));
             const token = localStorage.getItem('token');
             const response = await fetch(`https://carselling-production-25cb.up.railway.app/api/favoriscontroller/add`, {
                 method: 'POST',
@@ -88,7 +87,6 @@ const AnnonceService = {
 
     delFavoris: async (idannonce) => {
         try {
-            console.log(JSON.stringify(idannonce));
             const token = localStorage.getItem('token');
             const response = await fetch(`https://carselling-production-25cb.up.railway.app/api/favoriscontroller/delete`, {
                 method: 'DELETE',

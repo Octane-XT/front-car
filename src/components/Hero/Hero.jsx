@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from 'primereact/button';
 import heroimage from '../../assets/img/2023-Ferrari-296-GT3-001-2160.jpg'
 const Hero = () => {
     return (

@@ -1,4 +1,4 @@
-import { Component, useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./chatContent.css";
 import Avatar from "../chatList/Avatar";
 import ChatItem from "./ChatItem";

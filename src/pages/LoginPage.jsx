@@ -12,20 +12,15 @@ const LoginPage = ({ onLogin }) => {
 
 
   const handleLogin = () => {
-    console.log("tafiditra1");
-
-    // Assuming LoginService.check returns a promise
     LoginService.check(email, password)
       .then(() => {
-        // Simulate a delay of 1 second (adjust as needed)
         setTimeout(() => {
           if (localStorage.getItem('token') !== null) {
-            console.log("tafiditra2");
             navigate('/');
           } else {
 
           }
-        }, 1000); // 1000 milliseconds = 1 second
+        }, 500); // 1000 milliseconds = 1 second
       })
       .catch(error => {
         console.error("Login failed:", error);
