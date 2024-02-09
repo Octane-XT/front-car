@@ -13,7 +13,7 @@ const CarDetail = ({ product }) => {
 
     const handleContact = async (product) => {
         try {
-            const response = await fetch(`https://carselling-production-25cb.up.railway.app/api/messagecontroller/saveIdannonce/${product._id}`, {
+            /*const response = await fetch(`https://carselling-production-25cb.up.railway.app/api/messagecontroller/saveIdannonce/${product._id}`, {
                 method: 'GET',
                 headers: {
                     'content-Type': 'application/json',
@@ -25,7 +25,7 @@ const CarDetail = ({ product }) => {
             }
 
             const data = await response.json();
-            console.log(data);
+            console.log(data);*/
 
             // Move the navigate call outside of the return statement
             navigate(`/message/0`);
@@ -40,7 +40,7 @@ const CarDetail = ({ product }) => {
             return (
                 <div>
                     {/* Render a default image or a message */}
-                    <img src="default-image.jpg" alt="No Image" className="carousel-image" style={{ width: '100%' }} />
+                    <img src="default-image.jpg" alt="" className="carousel-image" style={{ width: '100%' }} />
                 </div>
             );
         }
